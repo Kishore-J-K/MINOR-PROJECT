@@ -79,7 +79,7 @@ Enter duration of process 1: 5
 Enter duration of process 2: 3
 Enter duration of process 3: 7
 
-Enter quantum for Round Robin: 2
+Enter quantum for Round Robin: 4
 
 First Come First Serve Schedule:
 Process 1 starts at 0, ends at 5
@@ -92,7 +92,10 @@ Process 1 starts at 3, ends at 8
 Process 3 starts at 8, ends at 15
 
 Round Robin Schedule:
-Process 1 starts at 0, ends at 2
-Process 2 starts at 2, ends at 4
-...
+Process 1 starts at 0, ends at 4
+Process 2 starts at 4, ends at 7
+Process 3 starts at 7, ends at 11
+Process 1 starts at 11, ends at 12
+Process 3 starts at 12, ends at 15
+
 ```
