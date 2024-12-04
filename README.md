@@ -72,7 +72,7 @@ The program uses a variety of data structures to efficiently implement these alg
 
 1. Compile the program using a C++ compiler:
    ```bash
-   g++ -o CPU_Scheduler CPU_Task_Sheduling.cpp
+   g++ -o CPU_Scheduler CPU_Task_Sheduler.cpp
    ```
 2. Run the executable:
    ```bash
