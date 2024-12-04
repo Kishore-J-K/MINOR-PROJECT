@@ -1,4 +1,4 @@
-### README: CPU Task Scheduling Program
+### CPU Task Scheduling Program
 
 ---
 
@@ -15,30 +15,21 @@ The program uses a variety of data structures to efficiently implement these alg
 #### **Data Structures Used**
 
 1. **Vector (`vector`):**
-   - **Purpose:** 
      - Used to store the durations of processes entered by the user.
-   - **Why?**
      - Dynamic resizing makes it suitable for storing input of arbitrary size.
      - Simple indexing allows easy traversal for scheduling logic.
 
 2. **Queue (`queue`):**
-   - **Purpose:**
      - Used in the FCFS and Round Robin algorithms to manage processes in the order they arrive or need further execution.
-   - **Why?**
-     - FIFO (First-In-First-Out) nature of `std::queue` aligns with the behavior required for these algorithms.
+     - FIFO (First-In-First-Out) nature of `queue` aligns with the behavior required for these algorithms.
 
 3. **Priority Queue (`priority_queue`):**
-   - **Purpose:**
      - Used in the SJF algorithm to sort processes by their execution time, with the shortest job prioritized.
-   - **Why?**
      - Ensures that the shortest available job is always selected for execution next.
-   - **Customization:**
      - A custom comparator `comparesjf` is defined to override the default max-heap behavior and implement a min-heap.
 
 4. **Struct (`proc`):**
-   - **Purpose:**
      - Represents a process with its execution time (`ptime`) and entry order (`entry`).
-   - **Why?**
      - Provides a way to associate metadata (e.g., process order) with each process, crucial for correct output formatting.
 
 ---
@@ -46,24 +37,18 @@ The program uses a variety of data structures to efficiently implement these alg
 #### **Explanation of Algorithms**
 
 1. **First Come First Serve (FCFS):**
-   - **Logic:**
      - Processes are executed in the order they arrive.
      - A simple queue is used to store and process jobs sequentially.
-   - **Output:**
      - Displays the start and end times for each process.
 
 2. **Shortest Job First (SJF):**
-   - **Logic:**
      - Processes with the shortest execution time are prioritized.
      - A priority queue, implemented as a min-heap, sorts jobs based on their durations.
-   - **Output:**
      - Displays the order of execution, along with start and end times.
 
 3. **Round Robin (RR):**
-   - **Logic:**
      - Processes are executed in a cyclic order with a fixed time slice (quantum).
      - Two queues (`q1` and `q2`) are alternated to manage processes waiting for their turn.
-   - **Output:**
      - Displays how processes share CPU time and the time intervals for each execution.
 
 ---
